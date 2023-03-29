@@ -1,0 +1,201 @@
+
+
+/*Font*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+
+
+
+:root{
+    --text-color:#f0f4f5;
+    --background-color:#263343;
+    --accent-color:#d49466;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+}
+ 
+h4{
+    font-family: var(--ff-primary);
+}
+
+
+body {
+margin:0;
+font-family: 'Source Sans Pro';
+}
+
+a { 
+text-decoration: none;
+color:var(--text-color);
+
+} /* text설정/**/
+
+
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items:center;
+background-color: #494b7c;
+padding: 0px 12px;
+}
+
+.navbar__logo{
+font-size: 24;
+color: white;
+margin-left:25px;
+}
+.navbar__logo i {
+color:orange;
+}
+.navbar__menu{
+display: flex;
+list-style : none;
+padding-left:0;
+}
+
+.navbar__menu li{
+padding: 8px 35px; /*메뉴클릭요소(범위) 크기를 설정*/
+}
+.navbar__menu li:hover{
+background-color: #d49456;
+border-radius:4px;
+}/*메뉴에 마우스를 대면 주황색 박스가 씌어짐*/
+
+.navbar__login{
+    display: flex;
+    list-style : none;
+    padding-left:0;
+    }
+    
+
+.navbar__login{
+    display: flex;
+    list-style : none;
+}
+
+.navbar__icons {
+list-style:none;
+color: white;
+display: flex;
+padding-left: 0;
+
+}
+
+.navbar__icons li{
+padding: 8px 12px;
+}
+.navbar__toggleBtn{
+display:none;
+position: absolute;
+top: 3px;
+right:32px;
+font-size: 24px;
+color:#d49456;
+
+}
+
+
+
+
+/*화면의 크기가 작아졌을 경우*/
+@media screen and (max-width:760px) {
+.navbar{
+    flex-direction: column;/*nav의 큰 요소들을 세로로 정렬해라*/
+    align-items: flex-start;
+    padding:8px 24px;
+}
+.navbar__menu,
+.navbar__login{
+    display:none;
+    flex-direction: column;/*메뉴를 세로로 정렬해라*/
+    align-items: center;
+    width:100%;
+}
+.navbar__menu li ,
+.navbar__login li{
+    width:100%;
+    text-align: center;
+}
+
+
+.navbar__icons {
+    display: none;
+    justify-content: center;
+    width:100%;
+}
+.navbar__toggleBtn{
+    display:block;
+}
+
+.navbar__menu.active,
+.navbar__login.active,
+.navbar__icons.active{
+    display:flex;
+}
+
+
+}
+
+/*메인화면 이미지*/
+
+.img-container{
+
+    width:80%;
+    height:650px;
+    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+#img-cafe{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/*info */
+.info-container{
+    margin-top: 150px;
+    
+}
+
+.info-title{
+    text-align: center;
+}
+.special {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+.box1-cctv,
+.box2-laptop,
+.box3-studygroup {
+  display: inline-block;
+  margin: 0 auto;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5%;
+  position :relative;
+  margin: 50px 50px;
+}
+
+.box1-text,
+.box2-text,
+.box3-text {
+    background-color: #c9dade;
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    top: -110px;
+    text-align: center;
+    border-radius: 5%;
+    
+}
